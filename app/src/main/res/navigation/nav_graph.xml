@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginPage">
+
+    <fragment
+        android:id="@+id/loginPage"
+        android:name="com.example.myapplication.LoginPage"
+        android:label="fragment_login_page"
+        tools:layout="@layout/fragment_login_page" >
+        <action
+            android:id="@+id/action_loginPage_to_otpPage"
+            app:destination="@id/otpPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/otpPage"
+        android:name="com.example.myapplication.OtpPage"
+        android:label="fragment_otp_page"
+        tools:layout="@layout/fragment_otp_page" >
+        <action
+            android:id="@+id/action_otpPage_to_logoutPage"
+            app:destination="@id/logoutPage"
+            app:popUpTo="@id/loginPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/logoutPage"
+        android:name="com.example.myapplication.LogoutPage"
+        android:label="fragment_logout_page"
+        tools:layout="@layout/fragment_logout_page" >
+        <action
+            android:id="@+id/action_logoutPage_to_loginPage"
+            app:destination="@id/loginPage" />
+    </fragment>
+</navigation>

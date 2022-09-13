@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+
+    <string name="underline"> <u>Terms of Service &amp; Privacy Policy </u> </string>
+
+</resources>
